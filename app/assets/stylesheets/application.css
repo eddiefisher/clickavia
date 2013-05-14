@@ -9,5 +9,10 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require buthub-rails
  *= require_tree .
  */
+
+#header {
+  text-align: center;
+}
