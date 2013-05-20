@@ -1,0 +1,9 @@
+<ul>
+<% for flight in @flights.models: %>
+  <li><%= flight.get('flight_name') %> - <% date = new Date(flight.get('created_at')) %>
+  <%= date.getDate() %>
+  <%= date.getFullYear() %>
+  <%= date.getMonth() %>
+  </li>
+<% end %>
+</ul>

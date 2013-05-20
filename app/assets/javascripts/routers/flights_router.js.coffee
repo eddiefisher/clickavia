@@ -4,9 +4,9 @@ class Clickavia.Routers.Flights extends Backbone.Router
 
   initialize: ->
     @collection = new Clickavia.Collections.Flights()
-    @collection.fetch()
+    @collection.fetch
+      reset: true
 
   index: ->
-    view = new Clickavia.Views.FlightsIndex
-      collection: @collection
+    view = new Clickavia.Views.FlightsIndex(collection: @collection)
     $('#container').html(view.render().el)

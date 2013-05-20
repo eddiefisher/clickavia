@@ -3,9 +3,9 @@ window.Clickavia =
   Collections: {}
   Views: {}
   Routers: {}
-  initialize: ->
+  init: ->
     new Clickavia.Routers.Flights()
-    Backbone.history.start()
+    Backbone.history.start(pushState: true)
 
 $(document).ready ->
-  Clickavia.initialize()
+  Clickavia.init()
